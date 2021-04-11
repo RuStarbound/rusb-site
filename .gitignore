@@ -1,9 +1,9 @@
 .DS_Store
+.idea
+.pnpm-debug.log
 .vite-ssg-dist
 .vite-ssg-temp
 *.local
 dist
 dist-ssr
 node_modules
-# intellij stuff
-.idea/

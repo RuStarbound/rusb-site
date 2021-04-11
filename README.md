@@ -1,160 +1,62 @@
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
-</p>
+# rusb-site (starbound.su)
 
-<p align='center'>
-Mocking up web app with <b>Vitesse</b><sup><em>(speed)</em></sup><br>
-<sub><em>Now with <a href="http://windicss.netlify.app/">Windi CSS</a>! ⚡️</em></sub>
-</p>
+[![РуСБ в Discord](https://img.shields.io/discord/538728229956091927?color=6a7ec2&label=RuStarbound&logo=discord&logoColor=white)](https://discord.gg/8zZMaGp5aP)
 
-<br>
+Новый сайт РуСБ (2021):
++ больше RP,
++ больше жизни,
++ больше контента,
++ хорошо отражающая пульс сервера посадочная страница.
 
-<p align='center'>
-<a href="https://vitesse.netlify.app/">Live Demo</a>
-</p>
+## Подсайты
 
-<br>
+Помимо главной страницы у нас имеются **подсайты**, так называемые разделы. Они насыщены информацией о самом сервере РуСБ в Starbound, RP-составляющей, и т. п.
 
-## Features
+Перечень подсайтов, к которому мы пока что пришли, следующий:
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+| Путь  | Название                   | Описание                              |
+| ----- |:--------------------------:| ------------------------------------- |
+| /rusb | RuStarbound                | Всё о RuStarbound.                    |
+| /vpa  | Вельветово Пресс-Агентство | Сайт в roleplay-контексте г. Вельвет. |
 
-- 🗂 [File based routing](./src/pages)
+Если есть смысл, то этот перечень всегда можно расширить.
 
-- 📦 [Components auto importing](./src/components)
+## Редактура
 
-- 📑 [Layout system](./src/layouts)
+Так как проект использует JAMstack решение, редактировать содержимое сайта как два пальца об асфальт - без знаний HTML и языков программирования. Весь контент представлен в формате [Markdown](https://paulradzkov.com/2014/markdown_cheatsheet/), самом удобоваримом из популярных языков разметки.
 
-- 📲 [PWA](https://github.com/antfu/vite-plugin-pwa)
+Весь контент помещён в папке [`pages`](pages).
 
-- 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
+## Разработка
 
-- 😃 [Use icons from any icon sets, with no compromise](./src/components)
+Исходный код проекта берёт истоки из шаблона [Vitesse](https://github.com/antfu/vitesse). Вместе с этим, нужно иметь арсенал инструментов для запуска и легкой работы с кодом:
+* [Node.js](https://nodejs.org/ru/download/)
+* [pnpm](https://pnpm.io/ru/installation)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* расширения для VSC в разделе [рекомендованных](.vscode/extensions.json)
 
-- 🌍 [I18n ready](./locales)
+Скачайте этот проект: наверху в GitHub есть зелёная кнопка "Code", там предложены варианты для скачивания. Это можно сделать через Git-клиент или простую распаковку [архива](https://github.com/rustarbound/rusb-site/archive/refs/heads/main.zip).
 
-- 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md)
+Теперь, когда всё красиво настроено, откройте **rusb-site** в Visual Studio Code (или другой IDE).
 
-- 🔥 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
+### Локальный сервер
 
-- 🖨 Server-side generation (SSG) via [vite-ssg](https://github.com/antfu/vite-ssg)
-
-- 🦾 TypeScript, of course
-
-- ☁️ Deploy on Netlify, zero-config
-
-<br>
-
-## Pre-packed
-
-### UI Frameworks
-
-- [Windi CSS](https://github.com/windicss/windicss) (On-demand [TailwindCSS](https://tailwindcss.com/)) - lighter and faster, with a bundle additional features!
-  - [Windi CSS Typography](https://windicss.netlify.app/guide/plugins.html#typography) - similar to [Tailwind CSS Typography](https://github.com/tailwindlabs/tailwindcss-typograph) but for Windi CSS
-
-### Icons
-
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) - icons as Vue components
-
-### Plugins
-
-- [Vue Router](https://github.com/vuejs/vue-router)
-  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-  - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
-- [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) - components auto import
-- [`vite-plugin-pwa`](https://github.com/antfu/vite-plugin-pwa) - PWA
-- [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - WindiCSS support
-- [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md) - Markdown as components / components in Markdown
-  - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) for syntax highlighting
-  - [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) - customizable Prism.js theme using CSS variables
-- [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-  - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n) - Vite plugin for Vue I18n
-- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [`@vueuse/head`](https://github.com/vueuse/head) - manipulate document head reactively
-
-### Coding Style
-
-- Use Composition API with [`<script setup>` SFC syntax](https://github.com/vuejs/rfcs/pull/227)
-- [ESLint](https://eslint.org/) with [@antfu/eslint-config](https://github.com/antfu/eslint-config), single quotes, no semi.
-
-### Dev tools
-
-- [TypeScript](https://www.typescriptlang.org/)
-- [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
-- [`vite-ssg`](https://github.com/antfu/vite-ssg) - Server-side generation
-- [Netlify](https://www.netlify.com/) - zero-config deployment
-- [VS Code Extensions](./.vscode/extensions.json)
-  - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - Fire up Vite server automatically
-  - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Vue 3 `<script setup>` IDE support
-  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - Icon inline display and autocomplete
-  - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - All in one i18n support
-  - [Windi CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense) - IDE support for Windi CSS
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-## Variations
-
-As this template is strongly opinionated, the following provides a curated list for community maintained variations with different preferences and feature sets. Check them out as well. PR to add yours are also welcome!
-
-- [vitesse-addons](https://github.com/JohnCampionJr/vitesse-addons) by [@johncampionjr](https://github.com/johncampionjr) - additional options for integrations, including [Prettier](https://prettier.io) and [Storybook](https://storybook.js.org)
-- [vitesse-ssr-template](https://github.com/frandiox/vitesse-ssr-template) by [@frandiox](https://github.com/frandiox) - Vitesse with SSR
-- [vitesse-nuxt](https://github.com/antfu/vitesse-nuxt) - Vitesse for Nuxt 2 (expiremental)
-
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit antfu/vitesse my-vitesse-app
-cd my-vitesse-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
-```
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Rename `name` field in `package.json`
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the title in `App.vue`
-- [ ] Change the favicon in `public`
-- [ ] Remove the `.github` folder which contains the funding info
-- [ ] Clean up the READMEs and remove routes
-
-And, enjoy :)
-
-## Usage
-
-### Development
-
-Just run and visit http://localhost:3333
-
+Пропишите в консоль:
 ```bash
 pnpm dev
 ```
 
-### Build
+И по адресу http://localhost:3333 будет свежая копия сайта РуСБ. Важное отличие от [конечной инстанции](https://starbound.su/) состоит в том, что эта будет обновляться "на лету" при изменениях в файлах из `src`, `pages` и пр.
 
-To build the App, run
+## Развёртывание
 
+Провести построение сайта можно, воспользовавшись простой командой:
 ```bash
 pnpm build
 ```
 
-And you will see the generated file in `dist` that ready to be served.
+В директории `dist` будет содержимое для загрузки на хостинг.
 
-### Deploy on Netlify
+### CI & CD
 
-Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
-
-## Why
-
-I have created several Vite apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
-
-So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. It's strongly opinionated, but feel free to tweak it or even maintains your own forks. [(see community maintained variation forks)](#variations)
+Мы планируем внедрить непрерывную интеграцию и непрерывное развёртывание для автоматизации загрузки сайта на хостинг при изменениях исходного кода.
